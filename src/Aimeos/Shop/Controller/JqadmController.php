@@ -209,18 +209,6 @@ class JqadmController extends AdminController
 		$lang = Request::get( 'locale', config( 'app.locale', 'en' ) );
 		$resource = Route::input( 'resource' );
 
-		$aimeos = app( 'aimeos' )->get();
-		$paths = $aimeos->getTemplatePaths( 'admin/jqadm/templates' );
-
-		$context = app( 'aimeos.context' )->get( false, 'backend' );
-		$context->setI18n( app( 'aimeos.i18n' )->get( array( $lang, 'en' ) ) );
-		$context->setLocale( app( 'aimeos.locale' )->getBackend( $context, $site ) );
-
-		$siteManager = \Aimeos\MShop::create( $context, 'locale/site');
-		$context->config()->apply( $siteManager->find( $site )->getConfig() );
-
-		$view = app( 'aimeos.view' )->create( $context, $paths, $lang );
-
 		$view->aimeosType = 'Laravel';
 		$view->aimeosVersion = app( 'aimeos' )->getVersion();
 		$view->aimeosExtensions = implode( ',', $aimeos->getExtensions() );
