@@ -48,6 +48,7 @@ class AdminController extends Controller
 		$siteId = current( array_reverse( explode( '.', trim( $request->user()->siteid, '.' ) ) ) );
 		$siteCode = ( $siteId ? $siteManager->get( $siteId )->getCode() : config( 'shop.mshop.locale.site', 'default' ) );
 		$locale = $request->user()->langid ?: config( 'app.locale', 'en' );
+		$locale = $request->user()->gender ?: config( 'app.locale', 'en' );
 
 		$param = array(
 			'resource' => 'dashboard',

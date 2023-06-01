@@ -40,6 +40,7 @@
         <?= $aibody['account/basket'] ?? '' ?>
         <?= $aibody['account/history'] ?? '' ?>
         <?= $aibody['account/favorite'] ?? '' ?>
+        <?= $aibody['account/gender'] ?? '' ?>
         <?= $aibody['account/watch'] ?? '' ?>
     </div>
 @stop
