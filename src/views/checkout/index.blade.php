@@ -7,11 +7,6 @@
     <?= $aiheader['catalog/tree'] ?? '' ?>
 @stop
 
-@section('aimeos_nav')
-    <?= $aibody['catalog/tree'] ?? '' ?>
-    <?= $aibody['catalog/search'] ?? '' ?>
-@stop
-
 @section('aimeos_body')
     <div class="container-fluid">
         <?= $aibody['checkout/standard'] ?>

@@ -15,20 +15,7 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
-		<style type="text/css">
-			form.login {
-				position: absolute;
-				left: 50%;
-				top: 50%;
-				width: 20rem;
-				margin: -6rem -10rem;
-			}
 
-			form.login .input-group-addon {
-				font-size: 1.25rem;
-				min-width: 3.65rem;
-			}
-		</style>
 	</head>
 	<body>
 
