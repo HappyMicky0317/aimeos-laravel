@@ -17,15 +17,3 @@
     <?= $aibody['catalog/tree'] ?? '' ?>
 @stop
 
-@section('aimeos_head_locale')
-    <?= $aibody['locale/select'] ?? '' ?>
-@stop
-
-@section('aimeos_head_search')
-    <?= $aibody['catalog/search'] ?? '' ?>
-@stop
-
-@section('aimeos_body')
-    <?= $aibody['catalog/home'] ?? '' ?>
-    <?= $aibody['cms/page'] ?? '' ?>
-@stop

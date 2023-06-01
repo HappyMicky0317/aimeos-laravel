@@ -49,11 +49,11 @@ class Composer
 				\Composer\Factory::createHttpDownloader( $event->getIO(), $config )
 					->get( 'https://api.github.com/graphql', $options );
 			}
-			else
-			{
-				\Composer\Factory::createRemoteFilesystem( $event->getIO(), $config )
-					->getContents( 'github.com', 'https://api.github.com/graphql', false, $options );
-			}
+			// else
+			// {
+			// 	\Composer\Factory::createRemoteFilesystem( $event->getIO(), $config )
+			// 		->getContents( 'github.com', 'https://api.github.com/graphql', false, $options );
+			// }
 		}
 		catch( \Exception $e ) {}
 	}

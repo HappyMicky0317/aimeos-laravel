@@ -36,11 +36,12 @@ class CatalogController extends Controller
 		{
 			$params['aiheader'][$name] = Shop::get( $name )->header();
 			$params['aibody'][$name] = Shop::get( $name )->body();
+			if( $e->getCode() >= 400 && $e->getCode() < 600 ) { abort( $e->getCode() ); }
+			throw $e;
 		}
 
 		return Response::view( Shop::template( 'catalog.count' ), $params )
 			->header( 'Content-Type', 'application/javascript' )
-			->header( 'Cache-Control', 'public, max-age=300' );
 	}
 
 
