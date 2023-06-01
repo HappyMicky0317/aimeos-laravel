@@ -21,7 +21,7 @@ return [
 		// 'page' => ['prefix' => 'p', 'middleware' => ['web']],
 		// 'home' => ['middleware' => ['web']],
 		// 'update' => [],
-	],
+	], 
 
 	'page' => [
 		'account-index' => ['locale/select', 'basket/mini', 'catalog/tree', 'catalog/search', 'account/profile', 'account/review', 'account/subscription', 'account/basket', 'account/history', 'account/favorite', 'account/watch', 'catalog/session'],
