@@ -70,11 +70,11 @@ class AccountCommand extends AbstractCommand
 
 		$manager = \Aimeos\MShop::create( $context, 'customer' );
 
-		try {
-			$item = $manager->find( $email );
-		} catch( \Aimeos\MShop\Exception $e ) {
-			$item = $manager->create();
-		}
+		// try {
+		// 	$item = $manager->find( $email );
+		// } catch( \Aimeos\MShop\Exception $e ) {
+		// 	$item = $manager->create();
+		// }
 
 		$item = $item->setCode( $email )->setLabel( $email )->setPassword( $password )->setStatus( 1 );
 		$item->getPaymentAddress()->setEmail( $email );
