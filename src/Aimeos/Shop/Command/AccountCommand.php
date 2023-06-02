@@ -53,13 +53,13 @@ class AccountCommand extends AbstractCommand
 	{
 		$site = $this->argument( 'site' ) ?: config( 'shop.mshop.locale.site', 'default' );
 
-		if( ( $email = $this->argument( 'email' ) ) === null ) {
-			$email = $this->ask( 'E-Mail' );
-		}
+		// if( ( $email = $this->argument( 'email' ) ) === null ) {
+		// 	$email = $this->ask( 'E-Mail' );
+		// }
 
-		if( ( $password = $this->option( 'password' ) ) === null ) {
-			$password = $this->secret( 'Password' );
-		}
+		// if( ( $password = $this->option( 'password' ) ) === null ) {
+		// 	$password = $this->secret( 'Password' );
+		// }
 
 		$context = $this->getLaravel()->make( 'aimeos.context' )->get( false, 'command' );
 		$context->setEditor( 'aimeos:account' );
