@@ -50,9 +50,9 @@ class JobsCommand extends AbstractCommand
 
 		$fcn = function( \Aimeos\MShop\ContextIface $lcontext, \Aimeos\Bootstrap $aimeos ) use ( $jobs )
 		{
-			$jobfcn = function( $context, $aimeos, $jobname ) {
-				\Aimeos\Controller\Jobs::create( $context, $aimeos, $jobname )->run();
-			};
+			// $jobfcn = function( $context, $aimeos, $jobname ) {
+			// 	\Aimeos\Controller\Jobs::create( $context, $aimeos, $jobname )->run();
+			// };
 
 			$process = $lcontext->process();
 			$site = $lcontext->locale()->getSiteItem()->getCode();
@@ -79,10 +79,6 @@ class JobsCommand extends AbstractCommand
 	{
 		$lv = $this->getLaravel();
 		$context = $lv->make( 'aimeos.context' )->get( false, 'command' );
-
-		$langManager = \Aimeos\MShop::create( $context, 'locale/language' );
-		$langids = $langManager->search( $langManager->filter( true ) )->keys()->toArray();
-		$i18n = $lv->make( 'aimeos.i18n' )->get( $langids );
 
 		$context->setEditor( 'aimeos:jobs' );
 		$context->setI18n( $i18n );
